@@ -1,0 +1,28 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Bebas Neue', cursive;
+  color: #222;
+  height: 100%;
+  background-color: #fff;
+}
+.container{
+  display: flex;
+  min-width: 592px;
+  padding-right: 50px;
+  padding-left: 50px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+img{
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

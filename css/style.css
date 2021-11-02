@@ -10,7 +10,6 @@ body{
   padding: 0;
   display: flex;
   height: 100%;
-  flex-direction: column;
   font-family: 'Bebas Neue', cursive;
   color: #222;
   background-color: #fff;
@@ -156,7 +155,7 @@ img{
   height: 100%;
   background-image: url("../img/forest.jpg");
   background-repeat: no-repeat;
-  background-size: 600px ;
+  background-size: cover ;
   background-position: center center;
 }
 .blog-left-container {

@@ -3,12 +3,13 @@
  --heading-font:'Bebas Neue', sans-serif;
  --text-font: "Roboto Condensed", sans-serif;
 }
-*{
-  box-sizing: border-box;
-}
 html{
-  scroll-behavior: smooth;
+  box-sizing: border-box;
   height: 100%;
+  scroll-behavior: smooth;
+}
+*,*::after,*::before{
+  box-sizing: border-box;
 }
 body{
   padding: 0;

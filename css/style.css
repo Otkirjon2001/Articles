@@ -1,61 +1,62 @@
+/* CUSTOM-PROPERTY */
+:root{
+  --brand-color:#1E90FF;
+  --heading-font:'Bebas Neue', sans-serif;
+  --text-font: "Roboto Condensed", sans-serif;
+ }
 /* FONTS */
 @font-face {
   font-family: 'Roboto Condensed';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
   src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
       url('../fonts/RobotoCondensed-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
-
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('../fonts/BebasNeue-Regular.woff2') format('woff2'),
-      url('../fonts/BebasNeue-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  src: url('../fonts/BebasNeue-Regular.woff2') format('woff2'),
+      url('../fonts/BebasNeue-Regular.woff') format('woff');
 }
-
 @font-face {
   font-family: 'Roboto Condensed';
-  src: url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'),
-      url('../fonts/RobotoCondensed-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+  src: url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+      url('../fonts/RobotoCondensed-Bold.woff') format('woff');
 }
 
 
 /* GLOBAL */
-:root{
- --brand-color:#1E90FF;
- --heading-font:'Bebas Neue', sans-serif;
- --text-font: "Roboto Condensed", sans-serif;
-}
 html{
   box-sizing: border-box;
   height: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 *,*::after,*::before{
   box-sizing: border-box;
 }
 body{
-  padding: 0;
-  margin: 0;
   display: flex;
   height: 100%;
+  padding: 0;
+  margin: 0;
   font-family: var(--heading-font);
+  font-weight: normal;
   background-color: #fff;
   color: #222;
 }
 .container{
   display: flex;
   max-width: 600px;
+  width: 100%;
   padding-right: 54px;
   padding-left: 54px;
-  width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -69,24 +70,35 @@ img{
 .blog{
   flex-grow: 1;
   display: flex;
+  max-width: 1200px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* BLOG-RIGHT */
 .blog-right {
   padding-top: 54px;
 }
+.blog-right-container{
+  display: block;
+}
 .blog-right-heading {
   margin-top: 0;
   margin-bottom: 24px;
+  padding-bottom: 24px;
   font-weight: normal;
   font-size: 24px;
   line-height: 29px;
   letter-spacing: 2px;
-  padding-bottom: 24px;
   border-bottom: 1px solid #999;
 }
 .latest-videos-items {
   width: 100%;
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0;
+  list-style: none;
 }
 .latest-videos-item {
   display: flex;
@@ -94,14 +106,10 @@ img{
 .latest-videos-item:not(:last-child){
   margin-bottom: 10px;
 }
-.latest-videos-item:last-of-type{
-  margin-bottom: 23px;
-}
 .latest-videos-item-img {
   width: 160px;
   height: 90px;
   border-radius: 4px;
-  display: inline-block;
 }
 .latest-videos-item-content {
   padding-top: 16px;
@@ -111,19 +119,19 @@ img{
 .latest-videos-heading {
   margin-top: 0;
   margin-bottom: 4px;
-  font-weight: normal;
   font-size: 18px;
+  font-weight: normal;
   line-height: 22px;
   letter-spacing: 2px;
 }
-
 .latest-videos-heading-link {
-  text-decoration: none;
   display: block;
   color: #222;
   transition: color 0.4s ease, opacity 0.4s ease;
+  text-decoration: none;
 }
 .latest-videos-heading-link:hover{
+  opacity: 0.8;
   color:  var(--brand-color);
 }
 .latest-videos-heading-link:active{
@@ -138,15 +146,15 @@ img{
   color: #666666;
 }
 .uploaded-time {
-  margin-right: 25px;
   display: flex;
   align-items: center;
+  margin-right: 25px;
 }
 .uploaded-time::before{
   content: "";
-  margin-right: 5px;
   width: 13px;
   height: 13px;
+  margin-right: 5px;
   background-image: url("../img/time-icon.svg");
   background-size: contain;
   background-position: center center;
@@ -157,26 +165,26 @@ img{
 }
 .views-number::before{
   content: "";
-  margin-right: 5px;
   width: 13px;
   height: 13px;
+  margin-right: 5px;
   background-image: url("../img/eyes-icon.svg");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
 }
 .reload {
-  font-family:  var(--text-font);
-  text-decoration: none;
   display: block;
   padding: 12px 209px;
-  background-color:  var(--brand-color);
-  border-radius: 4px;
-  color: #fff;
+  font-family:  var(--text-font);
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
+  border-radius: 4px;
+  color: #fff;
+  background-color:  var(--brand-color);
   transition: opacity 0.4s ease;
+  text-decoration: none;
 }
 .reload:hover{
   opacity: 0.8;
@@ -188,10 +196,10 @@ img{
 /* BLOG-LEFT */
 .blog-left{
   width: 600px;
-  height: 100%;
-  background-image: url("../img/forest.jpg");
+  height:625px;
+  background-image: url("../img/left-bg.jpg");
   background-repeat: no-repeat;
-  background-size: cover ;
+  background-size: contain ;
   background-position: center center;
 }
 .blog-left-container {
@@ -199,13 +207,14 @@ img{
   justify-content: center;
   align-items: center;
   height: 100%;
-
 }
 .blog-left-content {
-  width: 285px;
-
+  max-width: 285px;
+  width: 100%;
 }
 .blog-heading {
+  margin-top: 0;
+  margin-bottom: 24px;
   font-weight: normal;
   font-size: 24px;
   line-height: 29px;
@@ -213,11 +222,11 @@ img{
   color: #FFFFFF;
 }
 .blog-left-link{
-  text-decoration: none;
   display: inline-block;
-  padding: 12px 24px;
+  padding: 15px 24px;
   background-color:  var(--brand-color);
   transition: opacity 0.4s ease;
+  text-decoration: none;
 }
 .blog-left-link:hover{
   opacity: 0.8;
@@ -228,21 +237,20 @@ img{
 .top-blogs {
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-decoration: none;
+  padding-top: 4px;
   color: #fff;
+  text-decoration: none;
 
 }
 .top-blogs::before{
   content: "";
-  margin-right: 12px;
   width: 20px;
   height: 20px;
+  margin-right: 12px;
   background-image: url("../img/star-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-
 }
 
 @media
@@ -253,7 +261,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .blog-left{
-    background-image: url("../img/forest@2x.jpg");
+    background-image: url("../img/left-bg@2x.jpg");
   }
 
 

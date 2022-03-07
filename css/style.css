@@ -82,6 +82,7 @@ img{
 }
 .blog-right-container{
   display: block;
+  padding-left: 20px;
 }
 .blog-right-heading {
   margin-top: 0;

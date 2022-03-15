@@ -30,8 +30,7 @@
       url('../fonts/RobotoCondensed-Bold.woff') format('woff');
 }
 
-
-/* GLOBAL */
+/* GLOBAL-STYLES */
 html{
   box-sizing: border-box;
   height: 100%;
@@ -65,8 +64,17 @@ img{
   height: auto;
   object-fit: cover;
 }
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
-/* MAIN */
+/* MAIN-CONTENT */
 .blog{
   flex-grow: 1;
   display: flex;
@@ -88,8 +96,8 @@ img{
   margin-top: 0;
   margin-bottom: 24px;
   padding-bottom: 24px;
-  font-weight: normal;
   font-size: 24px;
+  font-weight: normal;
   line-height: 29px;
   letter-spacing: 2px;
   border-bottom: 1px solid #999;
@@ -128,8 +136,8 @@ img{
 .latest-videos-heading-link {
   display: block;
   color: #222;
-  transition: color 0.4s ease, opacity 0.4s ease;
   text-decoration: none;
+  transition: color 0.4s ease, opacity 0.4s ease;
 }
 .latest-videos-heading-link:hover{
   opacity: 0.8;
@@ -176,7 +184,7 @@ img{
 }
 .reload {
   display: block;
-  padding: 12px 209px;
+  padding: 12px 0;
   font-family:  var(--text-font);
   font-weight: bold;
   font-size: 14px;
@@ -185,6 +193,7 @@ img{
   color: #fff;
   background-color:  var(--brand-color);
   transition: opacity 0.4s ease;
+  text-align: center;
   text-decoration: none;
 }
 .reload:hover{
@@ -216,8 +225,8 @@ img{
 .blog-heading {
   margin-top: 0;
   margin-bottom: 24px;
-  font-weight: normal;
   font-size: 24px;
+  font-weight: normal;
   line-height: 29px;
   letter-spacing: 2px;
   color: #FFFFFF;
@@ -241,7 +250,6 @@ img{
   padding-top: 4px;
   color: #fff;
   text-decoration: none;
-
 }
 .top-blogs::before{
   content: "";
@@ -254,6 +262,7 @@ img{
   background-position: center center;
 }
 
+/* MEDIA */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -264,6 +273,4 @@ only screen and (                min-resolution: 2dppx) {
   .blog-left{
     background-image: url("../img/left-bg@2x.jpg");
   }
-
-
 }

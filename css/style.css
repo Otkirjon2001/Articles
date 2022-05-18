@@ -149,11 +149,11 @@ img{
 .blog-right {
   padding-top: 54px;
 }
-.blog-right-container{
+.blog-right__container{
   display: block;
   padding-left: 20px;
 }
-.blog-right-heading {
+.blog-right__heading {
   margin-top: 0;
   margin-bottom: 24px;
   padding-bottom: 24px;
@@ -163,30 +163,30 @@ img{
   letter-spacing: 2px;
   border-bottom: 1px solid #999;
 }
-.latest-videos-items {
+.blog-right__list{
   width: 100%;
   margin: 0;
   margin-bottom: 23px;
   padding: 0;
   list-style: none;
 }
-.latest-videos-item {
+.latest-video {
   display: flex;
 }
-.latest-videos-item:not(:last-child){
+.latest-video:not(:last-child){
   margin-bottom: 10px;
 }
-.latest-videos-item-img {
+.latest-video__img {
   width: 160px;
   height: 90px;
   border-radius: 4px;
 }
-.latest-videos-item-content {
+.latest-video__content {
   padding-top: 16px;
   padding-right: 9px;
   padding-left: 16px;
 }
-.latest-videos-heading {
+.latest-video__heading {
   margin-top: 0;
   margin-bottom: 4px;
   font-size: 18px;
@@ -194,17 +194,17 @@ img{
   line-height: 22px;
   letter-spacing: 2px;
 }
-.latest-videos-heading-link {
+.latest-video__link {
   display: block;
   color: #222;
   text-decoration: none;
   transition: color 0.4s ease, opacity 0.4s ease;
 }
-.latest-videos-heading-link:hover{
+.latest-video__link:hover{
   opacity: 0.8;
   color:  var(--brand-color);
 }
-.latest-videos-heading-link:active{
+.latest-video__link:active{
   opacity: 0.6;
 }
 .about-video {
@@ -215,12 +215,12 @@ img{
   line-height: 16px;
   color: #666666;
 }
-.uploaded-time {
+.about-video__time {
   display: flex;
   align-items: center;
   margin-right: 25px;
 }
-.uploaded-time::before{
+.about-video__time::before{
   content: "";
   width: 13px;
   height: 13px;
@@ -229,11 +229,11 @@ img{
   background-size: contain;
   background-position: center center;
 }
-.views-number {
+.about-video__views {
   display: flex;
   align-items: center;
 }
-.views-number::before{
+.about-video__views::before{
   content: "";
   width: 13px;
   height: 13px;
@@ -243,7 +243,7 @@ img{
   background-position: center center;
   background-repeat: no-repeat;
 }
-.reload {
+.blog-right__button {
   display: block;
   padding: 12px 0;
   font-family:  var(--text-font);
@@ -257,10 +257,10 @@ img{
   text-align: center;
   text-decoration: none;
 }
-.reload:hover{
+.blog-right__button:hover{
   opacity: 0.8;
 }
-.reload:active{
+.blog-right__button:active{
   opacity: 0.6;
 }
 

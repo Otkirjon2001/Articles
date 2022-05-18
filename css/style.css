@@ -75,7 +75,7 @@ img{
 }
 
 /* MAIN-CONTENT */
-.blog{
+.main-content{
   flex-grow: 1;
   display: flex;
   max-width: 1200px;
@@ -83,6 +83,67 @@ img{
   margin-right: auto;
   margin-left: auto;
 }
+
+
+/* BLOG-LEFT */
+.blog-left{
+  width: 600px;
+  height:625px;
+  background-image: url("../img/left-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain ;
+  background-position: center center;
+}
+.blog-left__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.blog-left__content {
+  max-width: 285px;
+  width: 100%;
+}
+.blog-left__heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 29px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+.button{
+  display: inline-block;
+  padding: 15px 24px;
+  background-color:  var(--brand-color);
+  transition: opacity 0.4s ease;
+  text-decoration: none;
+}
+.button:hover{
+  opacity: 0.8;
+}
+.button:active{
+  opacity: 0.6;
+}
+.button__text {
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+  color: #fff;
+  text-decoration: none;
+}
+.button__text::before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  background-image: url("../img/star-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
 
 /* BLOG-RIGHT */
 .blog-right {
@@ -203,64 +264,6 @@ img{
   opacity: 0.6;
 }
 
-/* BLOG-LEFT */
-.blog-left{
-  width: 600px;
-  height:625px;
-  background-image: url("../img/left-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: contain ;
-  background-position: center center;
-}
-.blog-left-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-.blog-left-content {
-  max-width: 285px;
-  width: 100%;
-}
-.blog-heading {
-  margin-top: 0;
-  margin-bottom: 24px;
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 29px;
-  letter-spacing: 2px;
-  color: #FFFFFF;
-}
-.blog-left-link{
-  display: inline-block;
-  padding: 15px 24px;
-  background-color:  var(--brand-color);
-  transition: opacity 0.4s ease;
-  text-decoration: none;
-}
-.blog-left-link:hover{
-  opacity: 0.8;
-}
-.blog-left-link:active{
-  opacity: 0.6;
-}
-.top-blogs {
-  display: flex;
-  align-items: center;
-  padding-top: 4px;
-  color: #fff;
-  text-decoration: none;
-}
-.top-blogs::before{
-  content: "";
-  width: 20px;
-  height: 20px;
-  margin-right: 12px;
-  background-image: url("../img/star-icon.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-}
 
 /* MEDIA */
 @media
